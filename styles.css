@@ -1,0 +1,188 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #4e73df;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 i {
+    margin-right: 10px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.search-bar input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    width: 70%;
+    max-width: 500px;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button {
+    background-color: #fff;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.search-bar button:hover {
+    background-color: #f0f0f0;
+}
+
+.search-bar i {
+    color: #4e73df;
+    font-size: 1.2rem;
+}
+
+main {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.book-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin: 10px;
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.book-card.fade-in {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.book-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.book-card .book-details {
+    padding: 20px;
+}
+
+.book-card .book-details h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #444;
+}
+
+.book-card .book-details p {
+    margin: 10px 0;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.book-card .book-details .author {
+    font-weight: bold;
+    color: #888;
+}
+
+.no-books {
+    font-size: 1.2rem;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: #4e73df;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .search-bar input {
+        width: 80%;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .search-bar input {
+        width: 85%;
+    }
+}
